@@ -1,5 +1,6 @@
 body {
   background-color: #F2F2F2;
+  overflow-x: hidden;
 }
 
 code {
@@ -22,3 +23,8 @@ code {
   width: 30%;
   margin: 0px 10px;
 }
+
+.cont{
+  padding: 20px 60px !important;
+}
+

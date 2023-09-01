@@ -36,7 +36,7 @@ const Navbar = () => {
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="#">
-                Link
+                About Us
               </a>
             </li>
             <li class="nav-item dropdown">
@@ -47,22 +47,43 @@ const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+                Services
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Action
-                  </a>
+                  <link class="dropdown-item" to="/report">
+                    Report Analyzer
+                  </link>
                 </li>
                 <li>
                   <a class="dropdown-item" href="#">
-                    Another action
+                    Prescription Analyzer
                   </a>
                 </li>
               </ul>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                Posts
+              </a>
+            </li>
           </ul>
+          <a class="navbar-brand navbar-brand-custom" href="#">
+            <span style={{ fontFamily: "Taviraj", marginLeft: "25px" }}>
+              Login
+            </span>
+            <i
+              class="fa-solid fa-right-to-bracket"
+              style={{ width: "20%", margin: "0px 10px" }}
+            ></i>
+          </a>
+          <a
+            class="navbar-brand navbar-brand-custom"
+            href="#"
+            style={{ backgroundColor: "rgba(0,0,0,0.7)",color:'white' }}
+          >
+            <span style={{ fontFamily: "Taviraj" }}>Sign Up</span>
+          </a>
         </div>
       </div>
     </nav>
