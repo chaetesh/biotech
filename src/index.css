@@ -17,6 +17,7 @@ code {
   background-color: white;
   border-radius: 20px;
   margin-top: '1px';
+  padding-right: 15px;
 }
 
 .navbar-brand-custom a img {
@@ -28,3 +29,14 @@ code {
   padding: 20px 60px !important;
 }
 
+input[type="file"]{
+  display: none;
+}
+
+.mansory__img {
+  transition: .3s;
+}
+
+.mansory__img:hover {
+  transform: scale(1.1);
+}

@@ -1,18 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../images/logo.png";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+  const { pathname } = location;
+  const splitLocation = pathname.split("/");
+
   return (
     <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid">
-        <a class="navbar-brand navbar-brand-custom" href="#">
-          <img
-            src="https://images.unsplash.com/photo-1451187863213-d1bcbaae3fa3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80"
-            style={{ width: "20%", margin: "0px 10px" }}
-          ></img>{" "}
+        <Link class="navbar-brand navbar-brand-custom" to="/">
+          <img src={logo} style={{ width: "20%", margin: "0px 10px" }}></img>{" "}
           <span style={{ fontFamily: "Taviraj", fontWeight: "bold" }}>
             Bio Tech
           </span>
-        </a>
+        </Link>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,30 +34,33 @@ const Navbar = () => {
             style={{ gap: "40px", marginLeft: "40px" }}
           >
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+              <Link className={splitLocation[1] === "" ? "nav-link active" : "nav-link"} to="/">
                 Home
-              </a>
+              </Link>
             </li>
+            <h3>/</h3>
             <li class="nav-item">
-              <a class="nav-link active" href="#">
+              <Link className={splitLocation[1] === "about" ? "nav-link active" : "nav-link"} to="/about">
                 About Us
-              </a>
+              </Link>
             </li>
+            <h3>/</h3>
             <li class="nav-item dropdown">
-              <a
+              <Link
                 class="nav-link active dropdown-toggle"
+                className={splitLocation[1] === "" ? "nav-link dropdown-toggle" : "nav-link dropdown-toggle"}
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Services
-              </a>
+              </Link>
               <ul class="dropdown-menu">
                 <li>
-                  <link class="dropdown-item" to="/report">
+                  <Link class="dropdown-item" to="/report">
                     Report Analyzer
-                  </link>
+                  </Link>
                 </li>
                 <li>
                   <a class="dropdown-item" href="#">
@@ -62,13 +69,20 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
+            <h3>/</h3>
             <li class="nav-item">
-              <a class="nav-link active" href="#">
+              <Link className={splitLocation[1] === "posts" ? "nav-link active" : "nav-link"} to="/posts">
                 Posts
-              </a>
+              </Link>
+            </li>
+            <h3>/</h3>
+            <li class="nav-item">
+              <Link className={splitLocation[1] === "faq" ? "nav-link active" : "nav-link"} to="/faq">
+                Ask Q's
+              </Link>
             </li>
           </ul>
-          <a class="navbar-brand navbar-brand-custom" href="#">
+          <Link class="navbar-brand navbar-brand-custom" to="/login">
             <span style={{ fontFamily: "Taviraj", marginLeft: "25px" }}>
               Login
             </span>
@@ -76,14 +90,14 @@ const Navbar = () => {
               class="fa-solid fa-right-to-bracket"
               style={{ width: "20%", margin: "0px 10px" }}
             ></i>
-          </a>
-          <a
+          </Link>
+          <Link
             class="navbar-brand navbar-brand-custom"
-            href="#"
-            style={{ backgroundColor: "rgba(0,0,0,0.7)",color:'white' }}
+            to="/register"
+            style={{ backgroundColor: "rgba(0,0,0,0.7)", color: "white" }}
           >
             <span style={{ fontFamily: "Taviraj" }}>Sign Up</span>
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
