@@ -5,11 +5,6 @@ https://master--sparkling-starburst-fe46de.netlify.app/
 # Med Insight
 This is a Medical Website containing services like Medical report analyzers are software applications that use artificial intelligence to extract and analyze information from medical reports. They can help healthcare professionals to improve the efficiency and accuracy of patient care by automating the process of extracting information from medical reports.
 
-## Screenshots
-
-![App Screenshot](https://i.ibb.co/4JPzPPD/Screenshot-2023-06-28-183921.png)
-
-
 ## Features
 
 - Report Analysis
